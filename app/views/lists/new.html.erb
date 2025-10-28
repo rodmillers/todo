@@ -1,11 +1,12 @@
-<% content_for :title, "New list" %>
+<% content_for :title, "New List" %>
 
-<h1>New list</h1>
+<div class="container py-4">
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3 fw-bold mb-0">New List</h1>
+    <%= link_to "← Back to Lists", lists_path, class: "btn btn-outline-secondary rounded-pill px-4 shadow-sm" %>
+  </div>
 
-<%= render "form", list: @list %>
-
-<br>
-
-<div>
-  <%= link_to "Back to lists", lists_path %>
+  <!-- Form -->
+  <%= render "form", list: @list %>
 </div>
