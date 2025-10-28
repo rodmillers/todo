@@ -2,7 +2,7 @@
   <% if list.errors.any? %>
     <div class="alert alert-danger" role="alert">
       <h5 class="alert-heading mb-2">
-        <%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:
+        <%= pluralize(list.errors.count, "error") %> prohibited this Todo from being saved:
       </h5>
       <ul class="mb-0">
         <% list.errors.each do |error| %>
@@ -15,7 +15,7 @@
   <!-- Description Field -->
   <div class="mb-3">
     <%= form.label :desc, "Description", class: "form-label fw-semibold" %>
-    <%= form.text_field :desc, class: "form-control", placeholder: "Enter list description" %>
+    <%= form.text_field :desc, class: "form-control", placeholder: "Enter Todo description" %>
   </div>
 
   <!-- Complete Checkbox -->
@@ -26,7 +26,7 @@
 
   <!-- Submit Button -->
   <div class="d-grid">
-    <%= form.submit (list.persisted? ? "Update List" : "Create List"),
+    <%= form.submit (list.persisted? ? "Update Todo" : "Create Todo"),
       class: "btn btn-primary btn-lg rounded-pill shadow-sm" %>
   </div>
 <% end %>

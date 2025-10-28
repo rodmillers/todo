@@ -1,4 +1,4 @@
-<% content_for :title, "View List" %>
+<% content_for :title, "View Todo" %>
 
 <div class="container py-4">
   <!-- Flash notice -->
@@ -14,7 +14,7 @@
 
   <!-- Actions -->
   <div class="d-flex justify-content-end align-items-center gap-2 mt-3">
-    <%= link_to "← Back to Lists", lists_path,
+    <%= link_to "← Back to Todos", lists_path,
         class: "btn btn-outline-secondary rounded-pill px-4 shadow-sm" %>
 
     <%= link_to "✏️ Edit", edit_list_path(@list),
@@ -23,7 +23,7 @@
     <%= button_to "🗑️ Delete",
         @list,
         method: :delete,
-        data: { turbo_confirm: "Are you sure you want to delete this list?" },
+        data: { turbo_confirm: "Are you sure you want to delete this Todo?" },
         class: "btn btn-danger rounded-pill px-4 shadow-sm" %>
   </div>
 </div>
