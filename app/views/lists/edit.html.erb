@@ -1,12 +1,18 @@
-<% content_for :title, "Editing list" %>
+<% content_for :title, "Edit List" %>
 
-<h1>Editing list</h1>
+<div class="container py-4">
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3 fw-bold mb-0">Edit List</h1>
+    <div>
+      <%= link_to "← Back to Lists", lists_path,
+          class: "btn btn-outline-secondary rounded-pill px-4 shadow-sm me-2" %>
+      <%= link_to "View List", @list,
+          class: "btn btn-outline-primary rounded-pill px-4 shadow-sm" %>
+    </div>
+  </div>
 
-<%= render "form", list: @list %>
-
-<br>
-
-<div>
-  <%= link_to "Show this list", @list %> |
-  <%= link_to "Back to lists", lists_path %>
+  <!-- Form -->
+  <%= render "form", list: @list %>
 </div>
+
